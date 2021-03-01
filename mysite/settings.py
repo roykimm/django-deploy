@@ -27,7 +27,8 @@ SECRET_KEY = 'jh7x6umfz0_&6)+tx^mcs!c*c+8f$_y^bz7cct66w$1*)_@ly-'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "ec2-18-222-188-155.us-east-2.compute.amazonaws.com"
+    "ec2-18-222-188-155.us-east-2.compute.amazonaws.com",
+    "localhost"
 ]
 
 
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
     'main'
 ]
 
@@ -72,6 +76,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ]
+}
 
 
 # Database
