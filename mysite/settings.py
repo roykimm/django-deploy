@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "ec2-18-222-188-155.us-east-2.compute.amazonaws.com",
+    "gobella.ml",
     "localhost"
 ]
 
