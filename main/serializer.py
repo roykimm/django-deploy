@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from .models import Memo
+from .models import Memo, Book
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta :
+        model = Book
+        fields = ['title','cover']
 
 class MemoSerializer(serializers.ModelSerializer):
     class Meta:
